@@ -28,17 +28,17 @@ export const FloatingNav = ({
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-    //   setVisible(true);
+      setVisible(true);
 
-      if (scrollYProgress.get() < 0.01) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+    //   if (scrollYProgress.get() < 0.01) {
+    //     setVisible(false);
+    //   } else {
+    //     if (direction < 0) {
+    //       setVisible(true);
+    //     } else {
+    //       setVisible(false);
+    //     }
+    //   }
     }
   });
 
