@@ -1,4 +1,5 @@
 import {FloatingNav} from '../components/navbar';
+import {TextGenerateEffect} from '../components/heroText';
 
 export default function Home() {
   return (
@@ -8,12 +9,7 @@ export default function Home() {
       { name: "Attendance", link: "/attendance" },
       { name: "TimeTable", link: "/timetable" },
     ]}/>
-    <div className="container mx-auto px-4 mt-[340px] lg:px-0 h-150vh">
-      <h1>HI</h1>
-    </div>
-    <div className="container mx-auto px-4  mt-[600px] lg:px-0 h-150vh">
-      <h1>HI</h1>
-    </div>
+    <TextGenerateEffect words="And here is your app, sleek, fast and trusted. Attendance, reminder, Day order and marks password protected" className='text-center pt-[57px]'/>
 
     </>
   );
