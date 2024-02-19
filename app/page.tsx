@@ -4,7 +4,7 @@ import { title } from 'process';
 import {FloatingNav} from '../components/navbar';
 
 
-export default function Home() {
+export default function attendance() {
   return (
     <>
     <div className='h-[45vh] flex items-end'>
