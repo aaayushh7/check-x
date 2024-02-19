@@ -5,8 +5,8 @@ export default function Home() {
     <>
     <FloatingNav navItems={[
       { name: "Home", link: "/" },
-      { name: "Attendance", link: "/about" },
-      { name: "TimeTable", link: "/contact" },
+      { name: "Attendance", link: "/attendance" },
+      { name: "TimeTable", link: "/timetable" },
     ]}/>
     <div className="container mx-auto px-4 mt-[340px] lg:px-0 h-150vh">
       <h1>HI</h1>
