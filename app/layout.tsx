@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <FloatingNav navItems={[
+      {/* <FloatingNav navItems={[
         { name: "Home", link: "/" },
         { name: "Attendance", link: "/attendance" },
         { name: "TimeTable", link: "/timetable" },
-      ]}/>
+      ]}/> */}
       {children}
       </body>
     </html>
