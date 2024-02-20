@@ -1,7 +1,5 @@
 "use server"
 const puppeteer = require('puppeteer');
-
-
 const url = 'https://academia.srmist.edu.in/';
 
 
@@ -21,9 +19,7 @@ export async function Login(email:string,pass:string) {
         await frame?.click('#nextbtn');
         await new Promise(resolve => setTimeout(resolve, 5000));
         console.log("Login succesful!")
-        await browser.close();
-        
-        
+        await browser.close(); 
     }
     catch(err){
         console.log(err);
