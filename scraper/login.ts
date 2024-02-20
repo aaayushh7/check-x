@@ -1,6 +1,5 @@
 "use server"
 import { getBrowserInstance } from '../utils/browserManager';
-// const puppeteer = require('puppeteer');
 const url = 'https://academia.srmist.edu.in/';
 
 
