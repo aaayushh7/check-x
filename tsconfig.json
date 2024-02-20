@@ -48,7 +48,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "node_modules/puppeteer-tsd/src/index.d.ts"
-  ],
+, "api/runAttendence.js", "app/attendance/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
