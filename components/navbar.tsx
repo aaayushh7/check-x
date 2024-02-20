@@ -46,7 +46,7 @@ export const FloatingNav = ({
   
     const handleLoginClick = async () => {
       try {
-        await setName('at7257@srmist.edu.in', 'Helloworld@123');
+        await setName('ps5922@srmist.edu.in', 'Mp@12345678');
         // Handle successful login
     } catch (error) {
         // Handle login error
