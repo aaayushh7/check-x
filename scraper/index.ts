@@ -1,18 +1,17 @@
-const puppeteer = require('puppeteer');
-import { Browser } from 'puppeteer';
+import handler from "@/api/runpuppeteer";
 
-const url = 'https://academia.srmist.edu.in/';
-const email = 'at7257@srmist.edu.in';
-const pass = 'Helloworld@123';
 
-export async function getData() {
+async function setName(string1: string, string2: string) {
     try {
-        const Browser: Browser = await puppeteer.launch({headless: true});
+        const checkEmail = string1;
+        const checkPass = string2;
+        console.log(checkEmail + " : " + checkPass);
 
-        const page = await Browser.newPage();
-        page.goto(url);
+        await handler(checkEmail,checkPass);
+        console.log("called handler")
+
     }
-    catch(err){
-        console.log(err);
-    }
-};
+    catch (err) { console.log(err) }
+}
+
+export default setName;
