@@ -8,7 +8,7 @@ async function setName(string1: string, string2: string) {
         console.log(checkEmail + " : " + checkPass);
 
         await handler(checkEmail,checkPass);
-        console.log("called handler")
+        console.log("Middle ware activated server to client.")
 
     }
     catch (err) { console.log(err) }
