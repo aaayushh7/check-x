@@ -1,25 +1,21 @@
-import {TextGenerateEffect} from '../components/heroText';
-import {HoverEffect} from '../components/attendance';
-import { title } from 'process';
-import {FloatingNav} from '../components/navbar';
-
+import { TextGenerateEffect } from '../components/heroText';
 
 export default function attendance() {
   return (
     <>
-    <div className='h-[45vh] flex items-end'>
-    <TextGenerateEffect words="And here is your app, sleek, fast and trusted. Attendance, reminder, Day order and marks password protected" className='text-center pl-5 pr-5'/>
-    </div>
-    <div className='p-5'>
-    <HoverEffect items={[
+      <div className='h-[45vh] flex items-end justify-center'>
+        <TextGenerateEffect words="Presenting your sleek, lightning-fast, and trustworthy app. It effortlessly manages attendance, sends timely reminders, organizes your day seamlessly, and secures your marks with password protection." className='text-center pl-5 pr-5' />
+      </div>
+      <div className='p-5'>
+        {/* <HoverEffect items={[
       {
         title:"Mathematics",
         description:'Mat padho, number to vaise bhi ni ane!',
         marks: '75%',
         link:'Nhi milega',
       }
-    ]}/>
-    </div>
+    ]}/> */}
+      </div>
 
     </>
   );
