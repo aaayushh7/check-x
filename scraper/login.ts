@@ -1,5 +1,7 @@
 "use server"
 import { getBrowserInstance } from '../utils/browserManager';
+import { getAttendance } from './attendance';
+
 const url = 'https://academia.srmist.edu.in/';
 
 
@@ -20,6 +22,9 @@ export async function Login(email:string,pass:string) {
         await new Promise(resolve => setTimeout(resolve, 5000));
         console.log("Login succesful!")
         // await browser.close(); 
+        await getAttendance();
+        console.log('getAttendance')
+        await browser.close();
     }
     catch(err){
         console.log(err);
