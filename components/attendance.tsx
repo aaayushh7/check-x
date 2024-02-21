@@ -55,7 +55,7 @@ export const HoverEffect = ({
             <div className="w-full flex">
             <CardDescription className="w-[85%]">{item.description}</CardDescription>
             
-            <CardDescription className="w-[15%] flex z-1 text-strong text-[#39FF14]">{item.marks}</CardDescription></div>
+            <CardDescription  className={`w-[15%] flex z-1 text-strong ${parseFloat(item.marks) > 75.00 ? 'text-[#39FF14]' : 'text-red-500'}`}>{item.marks}</CardDescription></div>
 
 
           </Card>
