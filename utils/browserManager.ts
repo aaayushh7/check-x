@@ -4,7 +4,7 @@ let browserInstance: puppeteer.Browser | null = null;
 
 export async function getBrowserInstance(): Promise<puppeteer.Browser> {
     if (!browserInstance) {
-        browserInstance = await puppeteer.launch({ headless: false });
+        browserInstance = await puppeteer.launch({ headless: true });
     }
     return browserInstance;
 }
