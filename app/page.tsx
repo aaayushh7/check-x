@@ -1,6 +1,6 @@
 import { TextGenerateEffect } from '../components/heroText';
 
-export default function attendance() {
+export default function home() {
   return (
     <>
       <div className='h-[45vh] flex items-end justify-center'>

@@ -1,12 +1,12 @@
 "use server"
-import { getBrowserInstance } from '../utils/browserManager';
-import { getAttendance } from './attendance';
-import { getSlots } from './slot';
+import { getBrowserInstance } from '../utils/browserManager.mjs';
+import { getAttendance } from './attendance.mjs';
+import { getSlots } from './slot.mjs';
 
 const url = 'https://academia.srmist.edu.in/';
 
 
-export async function Login(email:string,pass:string) {
+export async function Login(email,pass) {
     
     try {
         const browser = await getBrowserInstance();
@@ -24,8 +24,9 @@ export async function Login(email:string,pass:string) {
         await new Promise(resolve => setTimeout(resolve, 1000));
         console.log("Login succesful!")
         // await browser.close(); 
-        await getAttendance();
+       const list = await getAttendance();
         await getSlots();
+        return list;
         // console.log('getAttendance')
         await browser.close();
         // return browser;

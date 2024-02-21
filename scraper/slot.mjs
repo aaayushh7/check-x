@@ -1,5 +1,5 @@
 "use server"
-import { getBrowserInstance } from '../utils/browserManager';
+import { getBrowserInstance } from '../utils/browserManager.mjs';
 import fs from 'fs';
 import path from 'path';
 
