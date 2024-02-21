@@ -1,6 +1,6 @@
 "use client"
 import { HoverEffect } from '@/components/attendance'
-import { Attendance } from '@/data/attendance'
+import { Attendance } from '@/server/data/attendance'
 
 export default function Home() {
 
