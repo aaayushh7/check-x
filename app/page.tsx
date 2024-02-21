@@ -6,17 +6,6 @@ export default function attendance() {
       <div className='h-[45vh] flex items-end justify-center'>
         <TextGenerateEffect words="Presenting your sleek, lightning-fast, and trustworthy app. It effortlessly manages attendance, sends timely reminders, organizes your day seamlessly, and secures your marks with password protection." className='text-center pl-5 pr-5' />
       </div>
-      <div className='p-5'>
-        {/* <HoverEffect items={[
-      {
-        title:"Mathematics",
-        description:'Mat padho, number to vaise bhi ni ane!',
-        marks: '75%',
-        link:'Nhi milega',
-      }
-    ]}/> */}
-      </div>
-
     </>
   );
 }
