@@ -53,7 +53,7 @@ export async function getSlots(){
                 console.log('Data saved to data/attendance.js');
             }
         });
-        await browser.close();
+        // await browser.close();
         
         
 
