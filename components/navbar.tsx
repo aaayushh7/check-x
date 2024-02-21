@@ -9,7 +9,6 @@ import {
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 // import Scraper from '../scraper/index'
-import setName from "@/scraper";
 
 export const FloatingNav = ({
   navItems,
