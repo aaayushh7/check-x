@@ -1,6 +1,7 @@
 import express from 'express'; 
 import cors from 'cors'; 
 import path from 'path'; 
+import { closeBrowserInstance } from '../utils/browserManager.mjs';
 
 const app = express();
 
@@ -19,8 +20,12 @@ app.post('/api/login', async (req, res) => {
         const { email, password } = req.body;
 
         await setName(email, password);
+        closeBrowserInstance
+
 
         res.status(200).send('Login successful');
+        // res.sendFile(path.join(__dirname, '../app/login/page.js'));
+
     } catch (error) {
         console.error('Error during login:', error);
         res.status(500).send('Internal server error');
