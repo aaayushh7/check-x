@@ -1,0 +1,1 @@
+export const slots = ["A","B","C","D","E","F","G","P13-P14-","P29-P30-"]
