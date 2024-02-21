@@ -22,9 +22,7 @@ const LoginPage = () => {
         setLoading(true);
         try {
             await setName(email, password);
-            // Redirect to home page after setName function call
-            // Replace '/home' with the actual home page route
-            // Example: <Link href="/home">
+            
             <Link href="/">
                 <a>Redirecting...</a>
             </Link>
