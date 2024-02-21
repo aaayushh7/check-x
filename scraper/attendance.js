@@ -5,16 +5,15 @@ import path from 'path'; // Import path module to handle file paths
 
 
 const url = 'https://academia.srmist.edu.in/#Page:My_Attendance';
-const email = 'ps5922@srmist.edu.in';
-const pass = 'Mp@12345678';
 
 export async function getAttendance() {
     try {
         const browser = await getBrowserInstance();
         const page = await browser.newPage(); // Create a new page
 
+
         await page.goto(url);
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // await new Promise(resolve => setTimeout(resolve, 2000));
         await page.waitForSelector('table:nth-of-type(2) .cntdDiv');
         console.log("Found .cntdDiv element inside the second table");
         const thirdTableData = await page.evaluate(() => {
@@ -58,6 +57,7 @@ export async function getAttendance() {
                 console.log('Data saved to data/attendance.js');
             }
         });
+        // await browser.close();
     }
     catch (err) {
         console.log(err)
