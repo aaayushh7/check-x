@@ -1,1 +1,1 @@
-export const slots = ["A","B","C","D","E","F","G","P23-P24-","P21-P22-"]
+export const slots = ["A","B","C","D","E","F","G","P49-P50-","P31-P32-"]
