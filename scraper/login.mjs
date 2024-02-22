@@ -18,7 +18,7 @@ export async function Login(email,pass) {
         const frame = await iframeElement?.contentFrame();
         await frame?.type('#login_id', email);
         await frame?.click('#nextbtn');
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1500));
         await frame?.type('#password_container .textbox_div #password', pass);
         await frame?.click('#nextbtn');
         await new Promise(resolve => setTimeout(resolve, 1000));
