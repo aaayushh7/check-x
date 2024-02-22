@@ -9,22 +9,25 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get('/login', (req, res) => {
+app.get('/login', async (req, res) => {
     res.sendFile(path.join(__dirname, '../app/login/page.js'));
 });
 
 import setName from '../scraper/index.mjs';
 
-app.post('/api/login', async (req, res) => {
+app.post('/api/login', async (req, res,next) => {
     try {
         const { email, password } = req.body;
 
         await setName(email, password);
-        closeBrowserInstance
+        // closeBrowserInstance
 
-
-        res.status(200).send('Login successful');
+        // next();
+        console.log("after next");
+        res.redirect('../app/attendance/page.js');
+        console.log("after next");
         // res.sendFile(path.join(__dirname, '../app/login/page.js'));
+        
 
     } catch (error) {
         console.error('Error during login:', error);
@@ -32,6 +35,12 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
+app.get("/attendance", async(req,res)=>{
+    console.log("inside get");
+    // const response=true;
+    res.sendFile(path.join(__dirname, '../app/attendance/page.js'));
+
+});
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
